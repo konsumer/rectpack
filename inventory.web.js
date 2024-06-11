@@ -54,7 +54,7 @@ class InventoryCanvas extends Inventory {
 }
 
 // really dumb function to make a color for a UUID
-const uuidToColor = uuid => `#${uuid.split('-').pop().substr(0, 6)}`
+const uuidToColor = uuid => `#${uuid.split('-').pop().substr(-6)}`
 
 // this is the actual UI
 

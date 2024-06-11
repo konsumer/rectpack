@@ -15,15 +15,16 @@ export default class Inventory {
     this.width = width
     this.height = height
 
-    // this will track the list of rects
-    this.items = items
-    for (const item of items) {
-      this.addItem(item)
-    }
-
     // this will track the full grid
     // not really used, but helpful if you want to draw the gird, in some situations (X/O for example)
     this.grid = [...new Array(width)].map(() => [...new Array(height)].fill(0))
+
+    this.items = []
+
+    // this will track the list of rects
+    for (const item of items) {
+      this.addItem({ ...item })
+    }
   }
 
   // try to add an item, if available, return item (with position) or false
