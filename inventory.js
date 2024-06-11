@@ -26,7 +26,7 @@ export default class Inventory {
     this.grid = [...new Array(width)].map(() => [...new Array(height)].fill(0))
   }
 
-  // try to add an item, if available, return new rect or false
+  // try to add an item, if available, return item (with position) or false
   addItem (item) {
     const pos = this.findAvailablePosition(item)
 
@@ -47,6 +47,7 @@ export default class Inventory {
     return false
   }
 
+  // remove an item form inventory & clear the grid. returns false if not found
   removeItem (id) {
     const itemIndex = this.items.findIndex(i => i.id === id)
 
@@ -105,7 +106,7 @@ export default class Inventory {
     return false
   }
 
-  // this is just a representation of grid, not really needed
+  // this is just a text-representation of grid, not really needed, but nice for unit-tests or CLI
   getText () {
     return this.grid.map(l => l.map(i => i || '□').join(' ')).join('\n')
   }
