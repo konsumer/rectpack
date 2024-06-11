@@ -17,7 +17,7 @@ npm run test:watch
 npm run build
 ```
 
-It is also published [here](URL needed).
+It is also published [here](http://konsumer.js.org/rectpack/).
 
 
 Basically, it illustrates understanding the problem first, and creating unit-tests & simple visualization code to verify everything is doing what it should.
