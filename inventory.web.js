@@ -12,8 +12,8 @@ class InventoryCanvas extends Inventory {
     this.ctx = canvas.getContext('2d')
 
     // make the canvas 10x grid size
-    this.ctx.canvas.width = this.grid.length * 10
-    this.ctx.canvas.height = this.grid[0].length * 10
+    this.ctx.canvas.width = width * 10
+    this.ctx.canvas.height = height * 10
   }
 
   draw () {
