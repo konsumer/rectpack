@@ -1,0 +1,38 @@
+<head>
+  <title>gridpacking</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    canvas {
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      image-rendering: pixelated;
+    }
+    .listitem {
+      padding: 2px;
+      margin-top: 2px;
+      color: black;
+      text-shadow: 1px 1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white;
+      font-family: monospace;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    button, canvas, .listitem {
+      user-select: none;
+    }
+  </style>
+  <body>
+    <p>
+      Click buttons to add items, click list-items to remove.
+    </p>
+    <div>
+      <button>Add 1x1</button>
+      <button>Add 1x2</button>
+      <button>Add 3x3</button>
+      <button>Add 3x6</button>
+    </div>
+    <script type="module" src="inventory.web.js"></script>
+  </body>
+</head>
